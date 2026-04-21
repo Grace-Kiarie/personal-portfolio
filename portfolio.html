@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Grace Kiarie</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Grace<span>Designs</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Portfolio</h2>
+
+    <!-- Toggle Buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn" data-target="graphic">Graphic Design</button>
+      <button class="filter-btn" data-target="web">Web Design</button>
+    </div>
+
+    <!-- Graphic Design Grid -->
+    <div class="grid portfolio-grid" id="graphic">
+      <div class="card"><img src="assets/White Black Shadow Minimalist Beauty Skincare Product Features Instagram Po_20251103_041939_0000.png" alt="Poster 1"></div>
+      <div class="card"><img src="assets/Blue and Gold  Modern Eid Al Adha Greeting Instagram Post_20251103_042114_0000.png" alt="Poster 2"></div>
+      <div class="card"><img src="assets/Blue and Orange Modern Online Course Instagram Post_20251007_110115_0000.png" alt="Poster 3"></div>
+    </div>
+
+    <!-- Web Design Grid -->
+    <div class="grid portfolio-grid" id="web">
+      <div class="card"><img src="assets/images/website1.jpg" alt="Website 1"></div>
+      <div class="card"><img src="assets/images/website2.jpg" alt="Website 2"></div>
+      <div class="card"><img src="assets/images/website3.jpg" alt="Website 3"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Grace Designs. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Behance</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const buttons = document.querySelectorAll(".filter-btn");
+    const grids = document.querySelectorAll(".portfolio-grid");
+
+    // Hide all grids initially
+    grids.forEach(grid => grid.style.display = "none");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        const targetGrid = document.getElementById(targetId);
+
+        // Toggle this grid
+        if(targetGrid.style.display === "grid") {
+          targetGrid.style.display = "none";
+          btn.classList.remove("active");
+        } else {
+          // Hide other grids
+          grids.forEach(g => g.style.display = "none");
+          buttons.forEach(b => b.classList.remove("active"));
+
+          // Show this one
+          targetGrid.style.display = "grid";
+          btn.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

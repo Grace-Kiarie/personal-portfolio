@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Grace Kiarie</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <nav class="subtle-nav">
+  <h1 class="logo">Grace<span class="dot">.</span>Kiarie</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s connect! Whether you have a question, collaboration idea, or just want to say hi — I’d love to hear from you 🌷</p>
+
+    <!-- Social Links -->
+    <div class="socials">
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/your-github" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+      </a>
+      <a href="https://facebook.com/your-facebook" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://instagram.com/your-instagram" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      </a>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+   <footer>
+    <p>© 2025 Grace Kiarie. All rights reserved.</p>
+  </footer>
+
+
+  <!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("9D3EnNifYVJzOd8jN");
+
+    document.getElementById("contact-form").addEventListener("submit", function(event){
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      emailjs.send("service_tyozit8", "template_1i1w97m", {
+        from_name: name,
+        from_email: email,
+        message: message
+      })
+      .then(() => {
+        alert("🌸 Message sent successfully! Thank you, " + name + " 💌");
+        document.getElementById("contact-form").reset();
+      })
+      .catch(error => {
+        alert("😞 Message failed to send. Please try again later.");
+        console.error("EmailJS error:", error);
+      });
+    });
+  </script>
+</body>
+
+</html>
+</body>
+</html>

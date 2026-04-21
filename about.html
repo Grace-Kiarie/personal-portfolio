@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Grace</title>
+
+  <style>
+    /* ---------- GENERAL ---------- */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff, #cce8f4);
+      color: #022c43;
+      overflow-x: hidden;
+    }
+    /* ---------- NAVBAR ---------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #023859;
+  letter-spacing: 1px;
+}
+
+.logo .dot {
+  color: #00bcd4;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #023859;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Keeps your content from hiding behind navbar */
+body {
+  padding-top: 80px;
+}
+
+
+    section {
+      padding: 4rem 10%;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #011c40;
+      text-align: center;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #00bcd4, #26658C);
+      display: block;
+      margin: 1rem auto 0;
+      border-radius: 5px;
+    }
+
+    /* ---------- ABOUT SECTION ---------- */
+    #about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    #about .text {
+      flex: 1 1 500px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    #about .text h3 {
+      color: #023859;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    #about .text p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    #about .image {
+      flex: 1 1 400px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    #about .image img {
+      width: 300px;
+      border-radius: 50%;
+      border: 5px solid #00bcd4;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    #about .image img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- INFO CARDS ---------- */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      width: 260px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h4 {
+      color: #023859;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ---------- ANIMATIONS ---------- */
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+    <nav>
+  <h1 class="logo">Grace<span class="dot">.</span>Kiarie</h1>
+  <ul>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <section id="about">
+    <div class="text">
+      <h2>About Me</h2>
+      <h3>Hi, I’m Grace 🌸</h3>
+      <p>
+        I’m an ICT intern and creative designer passionate about connecting technology and human experience. 
+        My world revolves around web design, system support, and visual storytelling  turning ideas into interactive, meaningful designs.  
+        <br><br>
+        My journey in tech started with curiosity and grew into a deep passion for innovation, growth, and discipline. 
+        I believe that every project big or small  is an opportunity to make something that truly helps others and inspires confidence.  
+        <br><br>
+        Outside of tech, I care about mental health, self-growth, and creativity  because great work starts with a healthy, balanced mind.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h4>🎓 Education</h4>
+          <p>Diploma in Information Communication Technology  
+          <br>– [Murang'a University of Technology]</p>
+        </div>
+
+        <div class="card">
+          <h4>💼 Experience</h4>
+          <p>ICT Intern | Web & System Support  
+          <br>Graphic Design Projects</p>
+        </div>
+
+        <div class="card">
+          <h4>✨ Interests</h4>
+          <p>Mental Health · UI/UX Design  
+          <br>Growth · Creative Technology</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="your-photo.jpg" alt="Grace's portrait" />
+    </div>
+  </section>
+
+</body>
+</html>

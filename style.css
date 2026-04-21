@@ -1,0 +1,276 @@
+/* =========================================================
+   EXACT INSPIRATION CLONE — GLASSMORPHISM PORTFOLIO CSS
+   ========================================================= */
+
+/* ---------- GLOBAL RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #d3eeff, #bfe2ff, #e8d9ff);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ---------- BACKGROUND BLOBS ---------- */
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  background: #c1e7ff;
+  top: -120px;
+  left: -120px;
+}
+
+body::after {
+  width: 350px;
+  height: 350px;
+  background: #ffd6f6;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+  width: 90%;
+  margin: 30px auto;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1a2c42;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 20px;
+  transition: 0.25s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- LOGO AREA ---------- */
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.landing {
+  text-align: center;
+  padding: 120px 20px;
+  color: #1b2a41;
+  position: relative;
+}
+
+/* pastel shapes behind hero */
+.landing::before,
+.landing::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.55;
+  z-index: -1;
+}
+
+.landing::before {
+  background: #c8eaff;
+  top: -80px;
+  left: -50px;
+}
+
+.landing::after {
+  background: #ffd9f9;
+  bottom: -100px;
+  right: -40px;
+}
+
+.hero h2 {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  width: 60%;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* solid button */
+.btn-primary {
+  background: #ffffff;
+  color: #1a2c42;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+/* outline button */
+.btn-outline {
+  border: 2px solid #1a2c42;
+  color: #1a2c42;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- SKILLS SECTION ---------- */
+
+#skills {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 35px;
+  margin-bottom: 60px;
+  color: #1b2a41;
+}
+
+.skills-grid {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.skill {
+  padding: 45px 30px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.07);
+
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a2c42;
+  transition: 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  margin-top: 100px;
+  padding: 90px 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border: 1px solid rgba(255,255,255,0.35);
+  text-align: center;
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  color: #1a2c42;
+  background-color: gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));}  
+
+.footer-about h3 {
+  font-size: 26px;
+  color: #1a2c42;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: #1a2c42;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.footer-socials img {
+  width: 32px;
+  margin-right: 12px;
+  filter: blur(0) brightness(0.1);
+}
+
+.footer-bottom {
+  opacity: 0.6;
+  margin-top: 30px;
+}
